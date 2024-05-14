@@ -1,4 +1,4 @@
-class Producto{
+class Product{
     private _Id:number
     private _nombre:string;
     private _precio:number;
@@ -50,4 +50,4 @@ class Producto{
     }
 }
 
-export default Producto
+export default Product;

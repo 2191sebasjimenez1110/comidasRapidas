@@ -1,4 +1,4 @@
-class Pedido {
+class Delivery {
     private _domicilio : string;
     private _fecha : string;
     private _total : number;
@@ -37,4 +37,4 @@ class Pedido {
         this._total = total;
     }
 }
-export default Pedido
+export default Delivery

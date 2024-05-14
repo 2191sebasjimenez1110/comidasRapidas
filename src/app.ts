@@ -12,9 +12,9 @@ const app = express();
 app.use(bodyParser.json());
 
 
-app.use('/pedidos', pedidos);
-app.use('/product', product);
-app.use('/register', user);
+app.use('/Pedidos', pedidos);
+app.use('/Product', product);
+app.use('/Inicio', user);
 
 const PORT = process.env.PORT || 10101;
 
