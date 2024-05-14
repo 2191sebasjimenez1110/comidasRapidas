@@ -4,6 +4,6 @@ import isAdmin from "../Middlewares/isAdmin";
 
 const router = express.Router();
 
-router.get('/create',validateToken,isAdmin)
+router.post('/create',validateToken,isAdmin)
 
 export default router;
