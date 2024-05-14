@@ -4,13 +4,13 @@ import bcrypt from "bcryptjs";
 import db from "../Config/configBD";
 
 
-class userRepositorie {
+class userRepository {
 
     static async save(user : User){
         try {
                 const sql = 'INSERT INTO user (email, nombres, apellidos, rol, password) VALUES (?, ?, ?, ?, ?)';
                 const values = [user.email, user.nombres, user.apellidos, user.rol, user.password];
-                const query = await db.execute(sql, values);
+                await db.execute(sql, values);
                 return {register: true,status: "user inserted correctly",}
         } catch (error) {
             console.error("Error en la inserción del usuario:", error);
@@ -39,4 +39,4 @@ class userRepositorie {
     }
 }
 
-export default userRepositorie;
+export default userRepository;

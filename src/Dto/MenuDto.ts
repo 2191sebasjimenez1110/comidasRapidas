@@ -1,28 +1,16 @@
-class Product{
-    private _Id:number
+class Menu{
     private _nombre:string;
     private _precio:number;
     private _descripcion:string;
 
     constructor(
-        Id:number,
         nombre:string,
         precio:number,
         descripcion:string
     ){
-        this._Id = Id;
         this._nombre = nombre;
         this._precio = precio;
         this._descripcion = descripcion;
-
-    }
-
-    get Id():number{
-        return this._Id;
-    }
-
-    set Id(Id:number){
-        this._Id = Id;
     }
 
     get nombre():string{
@@ -50,4 +38,4 @@ class Product{
     }
 }
 
-export default Product;
+export default Menu;

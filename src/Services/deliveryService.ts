@@ -1,5 +1,5 @@
 import Delivery from "../Dto/DeliveryDto";
-import DeliveryRepositorie from "../Repositories/DeliveryRepositorie";
+import DeliveryRepositorie from "../Repositories/DeliveryRepository";
 
 class DeliveryService {
     static async add (Delivery : Delivery){

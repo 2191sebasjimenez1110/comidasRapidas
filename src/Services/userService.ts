@@ -2,7 +2,7 @@ import userAuht from "../Dto/AuhtDto";
 import User from "../Dto/UserDto";
 import generateHash from "../Helpers/generateHash";
 import generateToken from "../Helpers/generateToken";
-import userRepository from "../Repositories/UserRepositorie";
+import userRepository from "../Repositories/UserRepository";
 
 class userService {
     static async register(user : User){
