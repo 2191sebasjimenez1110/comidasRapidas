@@ -6,5 +6,4 @@ const generateHash = async (data: string) => {
     return await bcrypt.hash(data, salt);
 };
 
-
 export default generateHash;

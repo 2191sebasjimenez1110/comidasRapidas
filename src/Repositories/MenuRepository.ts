@@ -18,40 +18,16 @@ class MenuRepository {
 
     static async getMenu(): Promise<Menu[]>{
         const result : any = await db.query('SELECT * FROM menu');
-        
-        const menus : any[] = result[0].map((row: any) => {
-            return {
-              id: row.id,
-              nombre: row.nombre,
-              precio: row.precio,
-              descripcion: row.descripcion
-            };
-          });
-          console.log(menus);
-          
-      return menus;
+        return result[0];
     }
 
     static async getMenuById(id: number) {
         try{
             const result : any = await db.query('SELECT * FROM menu WHERE id = ?', [id]);
-            
             if (result[0].length === 0) {
                 return { exist : false, status: 'Menú no encontrado' };
             }
-            
-            const menu = {
-                id: result[0][0].id,
-                nombre: result[0][0].nombre,
-                precio: result[0][0].precio,
-                descripcion: result[0][0].descripcion
-            };
-
-            
-            return {
-                exist: true,
-                menu : menu
-            }
+            return {exist: true,menu : result[0]}
         } catch (error) {
             console.error('Error al obtener el menú:', error);
             return { exist : false, status: 'erro en la consulta' };

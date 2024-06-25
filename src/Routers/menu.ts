@@ -6,7 +6,7 @@ import MenuController from "../Controllers/MenuController";
 const router = express.Router();
 
 router.post('/Create',validateToken,isAdmin,MenuController.createMenu);
-router.get('/',validateToken,MenuController.getMenu);
-router.get('/:id',validateToken,MenuController.getMenuById);
+router.get('/',MenuController.getMenu);
+router.get('/:id',MenuController.getMenuById);
 
 export default router;
